@@ -2,6 +2,7 @@
 
 ## Project setup
 ```
+vue create [project-name]
 npm install
 ```
 
