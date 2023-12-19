@@ -59,8 +59,9 @@ export default {
     async signIn() {
       const email = prompt('Please enter your emailto sign in:');
       const auth = getAuth();
+      const baseUrl = `${window.location.protocol}//${window.location.host}`;
       const actionCodeSettings = {
-        url: `http://localhost:8080/products/${this.$route.params.productId}`,
+        url: `${baseUrl}/products/${this.$route.params.productId}`,
         handleCodeInApp: true
       } 
       await sendSignInLinkToEmail(auth, email, actionCodeSettings);
